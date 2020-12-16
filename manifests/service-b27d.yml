@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "aatiwarishubaks-b27d"
+    labels:
+        app: "aatiwarishubaks-b27d"
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 4000
+      targetPort: 4000
+      protocol: TCP
+      name: http
+    selector:
+        app: "aatiwarishubaks-b27d"
